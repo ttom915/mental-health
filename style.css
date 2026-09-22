@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap');
+
+html {
+    color-scheme: dark;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cambay', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    background-color: #bfdbf7;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+#nav-logo {
+    width: 100px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.card> figcaption {
+    text-align: center;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 345px;
+}
+
+.card-footer {
+    display: inline-block;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.card-footer button {
+    margin-top: auto;
+    align-self: center;
+}
+
+/* Fix Centering of Buttons Later
+    .card > footer button {
+    vertical-align: middle;
+    text-align: center;
+} */
+
+/* color #1e40af */
+
+button {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: plum;
+}
+.hero{
+    background-color: #bfdbf7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.resources {
+    width: 90%;
+    max-width: 950px;
+    padding: 20px;
+    margin: 15px auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resources a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.resources p {
+    margin: 0;
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.resources img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.resource-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resource-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.support-container {
+    flex: 1 1 320px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.support {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.gapping {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+@media (max-width: 700px) {
+    .gapping {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support-container {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+.support > p {
+    font-size: larger;
+}
+
+#modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 100;
+    transition: opacity 0.25s ease;
+}
+
+.modal__window {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: white;
+    padding: 2.5em 2em 2em;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal__window h2 {
+    text-align: center;
+    color: #1e3a8a;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+.modal__intro {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal__action {
+    background-color: #bfdbf7;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+.modal__action h3 {
+    color: #1e3a8a;
+    margin-bottom: 4px;
+}
+
+.modal__action p {
+    margin: 0;
+}
+
+.modal__more {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+.modal__link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1e40af;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.modal__link:hover {
+    background-color: #1e3a8a;
+}
+
+.modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    transition: background-color 0.2s ease;
+}
+
+.modal__close:hover {
+    background-color: #e0e0e0;
+}
+
+#modal:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media  (min-width:800px){
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+/* was start of my section */
+
+#options {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#options li {
+    margin-left: 30px;
+}
+
+#options > li > a.resources-change:hover {
+    color: orangered;
+}
+
+#options > li > a.resources-active {
+    color: orangered;
+}
+
+#options > li > a.therapists-change:hover {
+    color: fuchsia;
+}
+
+#options > li > a.therapists-active {
+    color: fuchsia;
+}
+
+#options a {
+    color: black;
+    font-weight: bold;
+    text-decoration: solid;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+    .block {
+        flex-direction: column;
+    }
+}
+
+
+.text > p {
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 20px;
+    padding-left: 20px;
+    text-align: left;
+} 
+
+.text > h2 {
+    text-align: left;
+}
+
+.text {
+    flex: 1;
+}
+
+.image > #puzzle {
+    width: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.image {
+        margin-left: 0;
+        order: 2;
+    }
+
+.header_buttons {
+    width: 45%;
+    background-color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header_buttons button {
+    width: 90%;
+    /* max-width: 350px; */
+    /* min-width: 300px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.header_buttons button a {
+    color: whitesmoke;
+}
+
+.header_buttons button h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+.image > #resources {
+    width: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-right: 50px;
+}
+
+footer {
+    text-align: center;
+}
+
+footer > button > a {
+    color: whitesmoke;
+}
+
